@@ -1,3 +1,10 @@
+"""
+rewrite.py
+rewrites mapped benchmark circuits into input format expected by placement algorithm
+TODO doesn't handle input/output nets well yet - no cells allocated as input/output pins
+
+"""
+
 from os import listdir
 from os.path import isfile, join, basename
 
@@ -70,13 +77,49 @@ for f in filenames:
 				nets[net] = inet 
 				inet = inet + 1
 	with open(join(outdir,basename(f.split('.')[0])+'.txt'),"w+") as of:
-		of.write(str(len(cells))+' '+str(len(nets))+' 12 12\n')
+		output = []
+		#of.write(str(len(cells))+' '+str(len(nets))+' 12 12\n')
 		#print str(len(cells))+' '+str(len(nets))
-		for cell in cells:
-			temp = ''
-			temp = temp + str(len(cell))+' '
-			for net in cell:
-				temp = temp + str(nets[net])+' '
-			of.write(temp+'\n')
-			#print temp
+
+		# one line per net
+		# each line contains number of blocks connected by net
+		# successive numbers are the block id numbers connected by that net
+		# net is net name string, nets[net] is net id number
+		numnets = 0
+		for net in nets:
+			# find source of net (check that there is only 1)
+			source = []
+			for i,cell in enumerate(cells):
+				if cell[-1] == net:
+					source.append(i)
+			if len(source) > 1:
+				print "more than 1 source"
+				print net
+			# find sinks of net
+			sinks = []
+			for i,cell in enumerate(cells):
+				if net in cell[:-1]:
+					sinks.append(i)
+			if len(source) == 1 and len(sinks) >= 1:
+				numnets = numnets + 1
+				line = str(1+len(sinks))
+				line += ' '
+				line += str(source[0]) 
+				line += ' '
+				for sink in sinks:
+					line += str(sink) 
+					line += ' '
+				line += '\n'
+				output.append(line)
+		of.write(str(len(cells))+ ' ' +str(numnets)+ ' 12 12\n')
+		for each in output:
+			of.write(each)
+
+		# for cell in cells:
+		# 	temp = ''
+		# 	temp = temp + str(len(cell))+' '
+		# 	for net in cell:
+		# 		temp = temp + str(nets[net])+' '
+		# 	of.write(temp+'\n')
+		# 	#print temp
 
