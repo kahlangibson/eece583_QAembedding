@@ -1,0 +1,105 @@
+.model top
+.inputs pa pb pc pd pe pf pg ph pi pj pk pl pm pn
+.outputs pp pq pr ps po
+.names n_n36 n_n44 n_n43 n_n45 pp
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names n_n36 n_n41 n_n40 n_n42 pq
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names n_n36 n_n38 n_n37 n_n39 pr
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names pe nn0 ps
+10 1
+.names n_n36 n_n47 n_n46 n_n48 po
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names nj0 no0 nd0
+00 1
+.names n_n28 n_n29 nq0
+1- 1
+-1 1
+.names no0 nk0 nf0
+00 1
+.names n_n32 n_n33 ng0
+1- 1
+-1 1
+.names n_n30 n_n31 np0
+1- 1
+-1 1
+.names nd0 ng0 n_n44
+00 1
+.names pb nf0 n_n43
+00 1
+.names nd0 nf0 n_n36
+00 1
+.names pb ng0 n_n45
+00 1
+.names ph nf0 n_n37
+00 1
+.names nd0 nq0 n_n38
+00 1
+.names n_n34 n_n35 ne0
+1- 1
+-1 1
+.names pi nl0 nm0
+00 1
+.names pk nm0 n_n33
+11 1
+.names pm ns0 n_n28
+00 1
+.names pm ns0 n_n29
+11 1
+.names pi pk nl0 nr0
+000 1
+.names pd pf nj0
+1- 1
+-0 1
+.names pk nm0 n_n32
+00 1
+.names pl nr0 n_n30
+00 1
+.names pj pn nn0
+0- 1
+-0 1
+.names nn0 nl0 no0
+00 1
+.names pi pk pl nl0 ns0
+0000 1
+.names pd pf nk0
+0- 1
+-0 1
+.names pg np0 n_n42
+00 1
+.names pi nl0 n_n35
+10 1
+.names nd0 np0 n_n41
+00 1
+.names pg nf0 n_n40
+00 1
+.names pc pd pe nl0
+0-- 1
+-0- 1
+--0 1
+.names pi nl0 n_n34
+01 1
+.names pl nr0 n_n31
+11 1
+.names nd0 ne0 n_n47
+00 1
+.names ph nq0 n_n39
+00 1
+.names pa nf0 n_n46
+00 1
+.names pa ne0 n_n48
+00 1
+.end

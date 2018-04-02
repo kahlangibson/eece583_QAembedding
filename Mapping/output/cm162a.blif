@@ -1,0 +1,50 @@
+# Benchmark "top" written by ABC on Sat Mar 31 17:20:43 2018
+.model top
+.inputs pa pb pc pd pe pf pg ph pi pj pk pl pm pn
+.outputs pp pq pr ps po
+.gate inv1  a=pb O=n20
+.gate inv1  a=pd O=n21
+.gate nand2 a=pf b=n21 O=n22
+.gate nor2  a=n22 b=n20 O=n23
+.gate inv1  a=pi O=n24
+.gate nand2 a=pe b=pc O=n25
+.gate nor2  a=n25 b=n21 O=n26
+.gate nand2 a=n26 b=n24 O=n27
+.gate nor2  a=n27 b=pk O=n28
+.gate nand2 a=pf b=pd O=n29
+.gate nand2 a=pn b=pj O=n30
+.gate nor2  a=n30 b=n25 O=n31
+.gate nor2  a=n31 b=n29 O=n32
+.gate nand2 a=n27 b=pk O=n33
+.gate nand2 a=n33 b=n32 O=n34
+.gate nor2  a=n34 b=n28 O=n35
+.gate nor2  a=n35 b=n23 O=pp
+.gate inv1  a=pg O=n37
+.gate nor2  a=n22 b=n37 O=n38
+.gate inv1  a=pk O=n39
+.gate and2  a=n26 b=n24 O=n40
+.gate nand2 a=n40 b=n39 O=n41
+.gate nor2  a=n41 b=pl O=n42
+.gate nand2 a=n41 b=pl O=n43
+.gate nand2 a=n43 b=n32 O=n44
+.gate nor2  a=n44 b=n42 O=n45
+.gate nor2  a=n45 b=n38 O=pq
+.gate inv1  a=n22 O=n47
+.gate nand2 a=n47 b=ph O=n48
+.gate nand2 a=n42 b=pm O=n49
+.gate inv1  a=pm O=n50
+.gate inv1  a=pl O=n51
+.gate nand2 a=n28 b=n51 O=n52
+.gate nand2 a=n52 b=n50 O=n53
+.gate nand2 a=n53 b=n49 O=n54
+.gate nand2 a=n54 b=n32 O=n55
+.gate and2  a=n55 b=n48 O=pr
+.gate inv1  a=pe O=n57
+.gate nor2  a=n30 b=n57 O=ps
+.gate inv1  a=pa O=n59
+.gate nor2  a=n22 b=n59 O=n60
+.gate nor2  a=n26 b=n24 O=n61
+.gate nand2 a=n32 b=n27 O=n62
+.gate nor2  a=n62 b=n61 O=n63
+.gate nor2  a=n63 b=n60 O=po
+.end

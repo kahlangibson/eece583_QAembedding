@@ -1,0 +1,29 @@
+# Benchmark "top" written by ABC on Sat Mar 31 17:20:43 2018
+.model top
+.inputs pa pb pc pd pe
+.outputs pf pg ph
+.gate inv1  a=pb O=n9
+.gate nand2 a=pc b=pa O=n10
+.gate or2   a=n10 b=n9 O=n11
+.gate inv1  a=pa O=n12
+.gate inv1  a=pc O=n13
+.gate nand2 a=n13 b=n12 O=n14
+.gate inv1  a=n14 O=n15
+.gate nand2 a=n15 b=n9 O=n16
+.gate nand2 a=n10 b=n9 O=n17
+.gate nand2 a=n17 b=n14 O=n18
+.gate nand2 a=n18 b=n16 O=n19
+.gate nand2 a=n19 b=n11 O=pf
+.gate and2  a=n17 b=n14 O=n21
+.gate nand2 a=pe b=pd O=n22
+.gate inv1  a=pd O=n23
+.gate inv1  a=pe O=n24
+.gate nand2 a=n24 b=n23 O=n25
+.gate nand2 a=n25 b=n22 O=n26
+.gate nand2 a=n26 b=n21 O=n27
+.gate inv1  a=n26 O=n28
+.gate nand2 a=n28 b=n18 O=n29
+.gate nand2 a=n29 b=n27 O=pg
+.gate nand2 a=n22 b=n18 O=n31
+.gate and2  a=n31 b=n25 O=ph
+.end

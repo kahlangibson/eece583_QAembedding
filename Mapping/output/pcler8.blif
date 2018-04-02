@@ -1,0 +1,85 @@
+# Benchmark "top" written by ABC on Sat Mar 31 17:20:45 2018
+.model top
+.inputs pp pa0 pq pr ps pt pu pv pw px py pz pa pb pc pd pe pf pg ph pi pj \
+ pk pl pm pn po
+.outputs pb0 pc0 pd0 pe0 pf0 pg0 ph0 pi0 pj0 pk0 pl0 pm0 pn0 po0 pp0 pq0 \
+ pr0
+.gate inv1  a=pz O=n45
+.gate inv1  a=px O=n46
+.gate inv1  a=pv O=n47
+.gate nand2 a=pu b=pt O=n48
+.gate nor2  a=n48 b=n47 O=n49
+.gate nand2 a=n49 b=pw O=n50
+.gate nor2  a=n50 b=n46 O=n51
+.gate nand2 a=n51 b=py O=n52
+.gate nor2  a=n52 b=n45 O=n53
+.gate inv1  a=pa0 O=n54
+.gate inv1  a=pi O=n55
+.gate inv1  a=pj O=n56
+.gate nor2  a=pk b=n56 O=n57
+.gate nand2 a=n57 b=n55 O=n58
+.gate nor2  a=n58 b=n54 O=n59
+.gate nand2 a=n59 b=n53 O=n60
+.gate inv1  a=n60 O=pb0
+.gate and2  a=pi b=pa O=pc0
+.gate and2  a=pi b=pb O=pd0
+.gate and2  a=pi b=pc O=pe0
+.gate and2  a=pi b=pd O=pf0
+.gate nand2 a=pi b=pe O=n66
+.gate inv1  a=n66 O=pg0
+.gate and2  a=pi b=pf O=ph0
+.gate nand2 a=pi b=pg O=n69
+.gate inv1  a=n69 O=pi0
+.gate nand2 a=pi b=ph O=n71
+.gate inv1  a=n71 O=pj0
+.gate inv1  a=pt O=n73
+.gate inv1  a=n58 O=n74
+.gate nand2 a=n74 b=n73 O=n75
+.gate inv1  a=pl O=n76
+.gate nor2  a=n60 b=n76 O=n77
+.gate nor2  a=n77 b=pc0 O=n78
+.gate nand2 a=n78 b=n75 O=pk0
+.gate nand2 a=pb0 b=pm O=n80
+.gate nor2  a=pu b=pt O=n81
+.gate nand2 a=n74 b=n48 O=n82
+.gate nor2  a=n82 b=n81 O=n83
+.gate nor2  a=n83 b=pd0 O=n84
+.gate nand2 a=n84 b=n80 O=pl0
+.gate nand2 a=pb0 b=pn O=n86
+.gate nand2 a=n48 b=n47 O=n87
+.gate nor2  a=n58 b=n49 O=n88
+.gate and2  a=n88 b=n87 O=n89
+.gate nor2  a=n89 b=pe0 O=n90
+.gate nand2 a=n90 b=n86 O=pm0
+.gate nand2 a=pb0 b=po O=n92
+.gate nor2  a=n49 b=pw O=n93
+.gate nand2 a=n74 b=n50 O=n94
+.gate nor2  a=n94 b=n93 O=n95
+.gate nor2  a=n95 b=pf0 O=n96
+.gate nand2 a=n96 b=n92 O=pn0
+.gate nand2 a=pb0 b=pp O=n98
+.gate nand2 a=n50 b=n46 O=n99
+.gate nor2  a=n58 b=n51 O=n100
+.gate nand2 a=n100 b=n99 O=n101
+.gate and2  a=n101 b=n66 O=n102
+.gate nand2 a=n102 b=n98 O=po0
+.gate nand2 a=pb0 b=pq O=n104
+.gate nor2  a=n51 b=py O=n105
+.gate nand2 a=n74 b=n52 O=n106
+.gate nor2  a=n106 b=n105 O=n107
+.gate nor2  a=n107 b=ph0 O=n108
+.gate nand2 a=n108 b=n104 O=pp0
+.gate nand2 a=pb0 b=pr O=n110
+.gate nand2 a=n52 b=n45 O=n111
+.gate nor2  a=n58 b=n53 O=n112
+.gate nand2 a=n112 b=n111 O=n113
+.gate and2  a=n113 b=n69 O=n114
+.gate nand2 a=n114 b=n110 O=pq0
+.gate and2  a=n74 b=n53 O=n116
+.gate nand2 a=n116 b=n54 O=n117
+.gate inv1  a=ps O=n118
+.gate nand2 a=n53 b=n118 O=n119
+.gate nand2 a=n119 b=n59 O=n120
+.gate and2  a=n120 b=n71 O=n121
+.gate nand2 a=n121 b=n117 O=pr0
+.end

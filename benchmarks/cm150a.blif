@@ -1,0 +1,157 @@
+.model top
+.inputs pp pq pr ps pt pu pa pb pc pd pe pf pg ph pi pj pk pl pm pn po
+.outputs pv
+.names pu nq0 pv
+1- 1
+-0 1
+.names n_n75 n_n74 n_n76 na0
+1-- 1
+-1- 1
+--1 1
+.names pq pb n_n78
+10 1
+.names pq pa n_n77
+00 1
+.names pa pb n_n79
+00 1
+.names n_n78 n_n77 n_n79 nz
+1-- 1
+-1- 1
+--1 1
+.names pq pe n_n71
+00 1
+.names pr nc0 n_n63
+10 1
+.names pk pl n_n55
+00 1
+.names pr nj0 n_n45
+10 1
+.names nj0 ni0 n_n44
+00 1
+.names pr ni0 n_n46
+00 1
+.names n_n45 n_n44 n_n46 nm0
+1-- 1
+-1- 1
+--1 1
+.names pq ph n_n69
+10 1
+.names pq pg n_n68
+00 1
+.names pg ph n_n70
+00 1
+.names n_n69 n_n68 n_n70 nc0
+1-- 1
+-1- 1
+--1 1
+.names pr nb0 n_n64
+00 1
+.names pq pl n_n54
+10 1
+.names pq po n_n47
+00 1
+.names ps nf0 n_n60
+10 1
+.names nf0 ne0 n_n59
+00 1
+.names ps ne0 n_n61
+00 1
+.names n_n60 n_n59 n_n61 nh0
+1-- 1
+-1- 1
+--1 1
+.names pq pi n_n56
+00 1
+.names pp pq n_n48
+01 1
+.names nc0 nb0 n_n62
+00 1
+.names pq pk n_n53
+00 1
+.names n_n54 n_n53 n_n55 nj0
+1-- 1
+-1- 1
+--1 1
+.names pp po n_n49
+00 1
+.names n_n36 n_n35 n_n37 nq0
+1-- 1
+-1- 1
+--1 1
+.names nk0 nl0 n_n41
+00 1
+.names ps nn0 n_n39
+10 1
+.names nm0 nn0 n_n38
+00 1
+.names ps nm0 n_n40
+00 1
+.names n_n39 n_n38 n_n40 no0
+1-- 1
+-1- 1
+--1 1
+.names n_n42 n_n41 n_n43 nn0
+1-- 1
+-1- 1
+--1 1
+.names n_n72 n_n71 n_n73 nb0
+1-- 1
+-1- 1
+--1 1
+.names n_n63 n_n62 n_n64 nf0
+1-- 1
+-1- 1
+--1 1
+.names pq pn n_n51
+10 1
+.names pq pm n_n50
+00 1
+.names pm pn n_n52
+00 1
+.names n_n51 n_n50 n_n52 nk0
+1-- 1
+-1- 1
+--1 1
+.names pt no0 n_n36
+10 1
+.names n_n57 n_n56 n_n58 ni0
+1-- 1
+-1- 1
+--1 1
+.names n_n66 n_n65 n_n67 ne0
+1-- 1
+-1- 1
+--1 1
+.names pr nl0 n_n42
+10 1
+.names pr nk0 n_n43
+00 1
+.names pt nh0 n_n37
+00 1
+.names pc pd n_n76
+00 1
+.names pr na0 n_n66
+10 1
+.names na0 nz n_n65
+00 1
+.names pr nz n_n67
+00 1
+.names n_n48 n_n47 n_n49 nl0
+1-- 1
+-1- 1
+--1 1
+.names pq pd n_n75
+10 1
+.names nh0 no0 n_n35
+00 1
+.names pq pc n_n74
+00 1
+.names pi pj n_n58
+00 1
+.names pq pf n_n72
+10 1
+.names pe pf n_n73
+00 1
+.names pq pj n_n57
+10 1
+.end

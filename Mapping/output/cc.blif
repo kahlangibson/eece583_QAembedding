@@ -1,0 +1,66 @@
+# Benchmark "top" written by ABC on Sat Mar 31 17:20:42 2018
+.model top
+.inputs pp pq pr ps pt pu pv pa pb pc pd pe pf pg ph pi pj pk pl pm po
+.outputs pa0 pb0 pc0 pd0 pe0 pf0 pg0 pw ph0 px pi0 py pj0 pz pk0 pl0 pm0 \
+ pn0 po0 pp0
+.gate inv1  a=pt O=pa0
+.gate nand2 a=pj b=pi O=pg0
+.gate inv1  a=pg0 O=pf0
+.gate and2  a=pl b=pv O=pw
+.gate inv1  a=pp O=n46
+.gate inv1  a=pq O=n47
+.gate nand2 a=pk b=pi O=n48
+.gate nor2  a=n48 b=n47 O=n49
+.gate nand2 a=n49 b=n46 O=n50
+.gate inv1  a=n50 O=px
+.gate nor2  a=n48 b=pq O=n52
+.gate nor2  a=n52 b=po O=n53
+.gate inv1  a=pa O=n54
+.gate nand2 a=n52 b=n54 O=n55
+.gate nand2 a=n55 b=pm O=n56
+.gate nor2  a=n56 b=n53 O=pi0
+.gate inv1  a=pm O=n58
+.gate nor2  a=n52 b=pp O=n59
+.gate or2   a=n59 b=n58 O=n60
+.gate nor2  a=n60 b=pl O=py
+.gate inv1  a=pb O=n62
+.gate nor2  a=n48 b=n62 O=n63
+.gate nor2  a=n63 b=n46 O=n64
+.gate nor2  a=n64 b=n49 O=n65
+.gate nor2  a=n65 b=n58 O=pj0
+.gate nor2  a=n50 b=n58 O=pz
+.gate inv1  a=pc O=n68
+.gate nor2  a=n48 b=n68 O=n69
+.gate nor2  a=n69 b=pq O=n70
+.gate or2   a=n49 b=n58 O=n71
+.gate nor2  a=n71 b=n70 O=pk0
+.gate nand2 a=n59 b=pr O=n73
+.gate nand2 a=n52 b=pd O=n74
+.gate nand2 a=n74 b=n73 O=n75
+.gate and2  a=n75 b=pm O=pl0
+.gate nor2  a=n52 b=ps O=n77
+.gate inv1  a=pe O=n78
+.gate nand2 a=n52 b=n78 O=n79
+.gate nand2 a=n79 b=pm O=n80
+.gate nor2  a=n80 b=n77 O=pm0
+.gate nor2  a=n52 b=pt O=n82
+.gate inv1  a=pf O=n83
+.gate nand2 a=n52 b=n83 O=n84
+.gate nand2 a=n84 b=pm O=n85
+.gate nor2  a=n85 b=n82 O=pn0
+.gate nor2  a=n52 b=pu O=n87
+.gate inv1  a=pg O=n88
+.gate nand2 a=n52 b=n88 O=n89
+.gate nand2 a=n89 b=pm O=n90
+.gate nor2  a=n90 b=n87 O=po0
+.gate nor2  a=n52 b=pv O=n92
+.gate inv1  a=ph O=n93
+.gate nand2 a=n52 b=n93 O=n94
+.gate nand2 a=n94 b=pm O=n95
+.gate nor2  a=n95 b=n92 O=pp0
+.barbuf pu pb0
+.barbuf pq pc0
+.barbuf ps pd0
+.barbuf pr pe0
+.barbuf pp ph0
+.end

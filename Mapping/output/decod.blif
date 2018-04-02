@@ -1,0 +1,39 @@
+# Benchmark "top" written by ABC on Sat Mar 31 17:20:44 2018
+.model top
+.inputs pa pb pc pd pe
+.outputs pp pq pr ps pt pu pf pg ph pi pj pk pl pm pn po
+.gate inv1  a=pa O=n22
+.gate nand2 a=pe b=n22 O=n23
+.gate inv1  a=pb O=n24
+.gate nor2  a=pc b=n24 O=n25
+.gate nand2 a=n25 b=pd O=n26
+.gate nor2  a=n26 b=n23 O=pp
+.gate inv1  a=pd O=n28
+.gate nand2 a=n25 b=n28 O=n29
+.gate nor2  a=n29 b=n23 O=pq
+.gate inv1  a=pc O=n31
+.gate nor2  a=n31 b=pb O=n32
+.gate nand2 a=n32 b=pd O=n33
+.gate nor2  a=n33 b=n23 O=pr
+.gate nand2 a=n32 b=n28 O=n35
+.gate nor2  a=n35 b=n23 O=ps
+.gate nor2  a=pc b=pb O=n37
+.gate nand2 a=n37 b=pd O=n38
+.gate nor2  a=n38 b=n23 O=pt
+.gate nand2 a=n37 b=n28 O=n40
+.gate nor2  a=n40 b=n23 O=pu
+.gate nand2 a=pe b=pa O=n42
+.gate and2  a=pc b=pb O=n43
+.gate nand2 a=n43 b=pd O=n44
+.gate nor2  a=n44 b=n42 O=pf
+.gate nand2 a=n43 b=n28 O=n46
+.gate nor2  a=n46 b=n42 O=pg
+.gate nor2  a=n42 b=n26 O=ph
+.gate nor2  a=n42 b=n29 O=pi
+.gate nor2  a=n42 b=n33 O=pj
+.gate nor2  a=n42 b=n35 O=pk
+.gate nor2  a=n42 b=n38 O=pl
+.gate nor2  a=n42 b=n40 O=pm
+.gate nor2  a=n44 b=n23 O=pn
+.gate nor2  a=n46 b=n23 O=po
+.end

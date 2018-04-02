@@ -1,0 +1,29 @@
+.model top
+.inputs pa pb pc pd pe pf pg ph pi pj pk
+.outputs pl
+.names n_n7 n_n6 n_n9 n_n8 n_n10 n_n3 n_n5 n_n4 pl
+1------- 1
+-1------ 1
+--1----- 1
+---1---- 1
+----1--- 1
+-----1-- 1
+------1- 1
+-------1 1
+.names pa pi pj pk n_n9
+1000 1
+.names pf pi pj pk n_n5
+1101 1
+.names pe pi pj pk n_n6
+1001 1
+.names pd pi pj pk n_n7
+1110 1
+.names pc pi pj pk n_n8
+1010 1
+.names ph pi pj pk n_n3
+1111 1
+.names pg pi pj pk n_n4
+1011 1
+.names pb pi pj pk n_n10
+1100 1
+.end

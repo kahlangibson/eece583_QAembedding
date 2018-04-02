@@ -1,0 +1,38 @@
+# Benchmark "top" written by ABC on Sat Mar 31 17:20:45 2018
+.model top
+.inputs pp pq pr pa pb pc pd pe pf pg ph pi pk pl pm pn po
+.outputs pa0 pb0 pc0 ps pd0 pt pe0 pu pf0 pv pg0 pw ph0 px py pz
+.gate nor2  a=pk b=pi O=n34
+.gate inv1  a=pi O=n35
+.gate nor2  a=n35 b=pa O=n36
+.gate nor2  a=n36 b=n34 O=pa0
+.gate nor2  a=pl b=pi O=n38
+.gate nor2  a=n35 b=pb O=n39
+.gate nor2  a=n39 b=n38 O=pb0
+.gate nor2  a=pm b=pi O=n41
+.gate nor2  a=n35 b=pc O=n42
+.gate nor2  a=n42 b=n41 O=pc0
+.gate nor2  a=pn b=pi O=n44
+.gate nor2  a=n35 b=pd O=n45
+.gate nor2  a=n45 b=n44 O=pd0
+.gate nor2  a=po b=pi O=n47
+.gate nor2  a=n35 b=pe O=n48
+.gate nor2  a=n48 b=n47 O=pe0
+.gate nor2  a=pi b=pp O=n50
+.gate nor2  a=n35 b=pf O=n51
+.gate nor2  a=n51 b=n50 O=pf0
+.gate nor2  a=pi b=pq O=n53
+.gate nor2  a=n35 b=pg O=n54
+.gate nor2  a=n54 b=n53 O=pg0
+.gate nor2  a=pi b=pr O=n56
+.gate nor2  a=n35 b=ph O=n57
+.gate nor2  a=n57 b=n56 O=ph0
+.barbuf pk ps
+.barbuf pl pt
+.barbuf pm pu
+.barbuf pn pv
+.barbuf po pw
+.barbuf pp px
+.barbuf pq py
+.barbuf pr pz
+.end

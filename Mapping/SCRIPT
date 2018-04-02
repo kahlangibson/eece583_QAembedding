@@ -1,0 +1,4 @@
+read_library project.genlib
+strash
+dc2
+map

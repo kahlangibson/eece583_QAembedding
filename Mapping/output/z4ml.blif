@@ -1,0 +1,89 @@
+# Benchmark "top" written by ABC on Sat Mar 31 17:20:45 2018
+.model top
+.inputs _7 _6 _5 _4 _3 _2 _1
+.outputs _25 _26 _24 _27
+.gate inv1  a=_5 O=n12
+.gate nor2  a=_1 b=_4 O=n13
+.gate inv1  a=n13 O=n14
+.gate inv1  a=_6 O=n15
+.gate inv1  a=_3 O=n16
+.gate nor2  a=n16 b=n15 O=n17
+.gate nor2  a=n17 b=n14 O=n18
+.gate inv1  a=n18 O=n19
+.gate nand2 a=_1 b=_4 O=n20
+.gate nor2  a=_6 b=_7 O=n21
+.gate nand2 a=n21 b=n20 O=n22
+.gate nor2  a=_3 b=_7 O=n23
+.gate nand2 a=n23 b=n20 O=n24
+.gate nand2 a=n16 b=n15 O=n25
+.gate and2  a=n25 b=n24 O=n26
+.gate and2  a=n26 b=n22 O=n27
+.gate nand2 a=n27 b=n19 O=n28
+.gate nand2 a=n28 b=n12 O=n29
+.gate nor2  a=n12 b=n15 O=n30
+.gate nand2 a=_1 b=_7 O=n31
+.gate nand2 a=n31 b=n16 O=n32
+.gate nand2 a=n32 b=n30 O=n33
+.gate nor2  a=n20 b=n12 O=n34
+.gate nand2 a=n34 b=n25 O=n35
+.gate and2  a=n35 b=n33 O=n36
+.gate nand2 a=_4 b=_7 O=n37
+.gate nor2  a=n37 b=n15 O=n38
+.gate nand2 a=n38 b=_5 O=n39
+.gate nand2 a=n39 b=n36 O=n40
+.gate nand2 a=n14 b=_3 O=n41
+.gate nand2 a=_5 b=_7 O=n42
+.gate or2   a=n42 b=n41 O=n43
+.gate nand2 a=n43 b=_2 O=n44
+.gate nor2  a=n44 b=n40 O=n45
+.gate nand2 a=n45 b=n29 O=n46
+.gate inv1  a=_2 O=n47
+.gate nand2 a=n41 b=n15 O=n48
+.gate nand2 a=n37 b=n31 O=n49
+.gate nand2 a=n49 b=_6 O=n50
+.gate inv1  a=n20 O=n51
+.gate nor2  a=n21 b=n16 O=n52
+.gate nor2  a=n52 b=n51 O=n53
+.gate nand2 a=n53 b=n50 O=n54
+.gate nand2 a=n54 b=n48 O=n55
+.gate nand2 a=n55 b=n12 O=n56
+.gate inv1  a=n17 O=n57
+.gate nor2  a=n49 b=n51 O=n58
+.gate nand2 a=n58 b=n57 O=n59
+.gate and2  a=n59 b=_5 O=n60
+.gate nand2 a=n60 b=n25 O=n61
+.gate nand2 a=n61 b=n56 O=n62
+.gate nand2 a=n62 b=n47 O=n63
+.gate and2  a=n63 b=n46 O=_25
+.gate nor2  a=n58 b=n25 O=n65
+.gate nand2 a=n50 b=n22 O=n66
+.gate nor2  a=n66 b=n18 O=n67
+.gate nor2  a=n67 b=n16 O=n68
+.gate nor2  a=n68 b=n65 O=n69
+.gate nand2 a=n24 b=n19 O=n70
+.gate nand2 a=n70 b=_6 O=n71
+.gate nand2 a=n51 b=n17 O=n72
+.gate and2  a=n72 b=n71 O=n73
+.gate nand2 a=n73 b=n69 O=_26
+.gate nand2 a=n31 b=n57 O=n75
+.gate nand2 a=n75 b=n25 O=n76
+.gate nand2 a=n51 b=_6 O=n77
+.gate or2   a=_1 b=_7 O=n78
+.gate inv1  a=_4 O=n79
+.gate nor2  a=n16 b=n79 O=n80
+.gate nand2 a=n80 b=n78 O=n81
+.gate nand2 a=n81 b=n77 O=n82
+.gate nor2  a=n82 b=_5 O=n83
+.gate nand2 a=n83 b=n76 O=n84
+.gate nand2 a=n84 b=_2 O=n85
+.gate nand2 a=n38 b=_2 O=n86
+.gate nand2 a=n86 b=n39 O=n87
+.gate nand2 a=n43 b=n36 O=n88
+.gate nor2  a=n88 b=n87 O=n89
+.gate nand2 a=n89 b=n85 O=_24
+.gate nand2 a=n78 b=n31 O=n91
+.gate nand2 a=n91 b=_4 O=n92
+.gate inv1  a=n91 O=n93
+.gate nand2 a=n93 b=n79 O=n94
+.gate nand2 a=n94 b=n92 O=_27
+.end

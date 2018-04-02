@@ -1,0 +1,155 @@
+.model top
+.inputs pp pq pr ps pt pu pv pa pb pc pd pe pf pg ph pi pj pk pl pm po
+.outputs pa0 pb0 pc0 pd0 pe0 pf0 pg0 pw ph0 px pi0 py pj0 pz pk0 pl0 pm0 pn0 \
+po0 pp0
+.names pt pa0
+0 1
+.names pi pj pf0
+11 1
+.names pf0 pg0
+0 1
+.names pv pl pw
+11 1
+.names pp pq pi pk px
+0111 1
+.names n_n49 n_n50 pi0
+1- 1
+-1 1
+.names n_n51 n_n52 py
+1- 1
+-1 1
+.names n_n47 n_n48 pj0
+1- 1
+-1 1
+.names pq ni2 pz
+10 1
+.names n_n45 n_n44 n_n46 pk0
+1-- 1
+-1- 1
+--1 1
+.names n_n42 n_n43 pl0
+1- 1
+-1 1
+.names n_n40 n_n41 pm0
+1- 1
+-1 1
+.names n_n38 n_n39 pn0
+1- 1
+-1 1
+.names n_n36 n_n37 po0
+1- 1
+-1 1
+.names n_n34 n_n35 pp0
+1- 1
+-1 1
+.names pm n_n29 nx1
+0- 1
+-1 1
+.names pm n_n32 ns1
+0- 1
+-1 1
+.names pq pi pk nr1
+0-- 1
+-0- 1
+--0 1
+.names pm n_n31 n_n30 nv1
+0-- 1
+-1- 1
+--1 1
+.names pq pc nu1
+1- 1
+-0 1
+.names pp pi pk pm ni2
+1--- 1
+-0-- 1
+--0- 1
+---0 1
+.names pm n_n33 nm1
+0- 1
+-1 1
+.names po nm1 n_n50
+10 1
+.names pp pr nx1 n_n42
+010 1
+.names pv nf2 n_n35
+10 1
+.names nm1 nl1 n_n49
+00 1
+.names nz1 nl1 n_n40
+00 1
+.names ps nz1 n_n41
+10 1
+.names nf2 nl1 n_n34
+00 1
+.names ns1 nr1 n_n47
+00 1
+.names pp ns1 n_n48
+10 1
+.names nx1 nl1 n_n43
+00 1
+.names nd2 nl1 n_n36
+00 1
+.names pu nd2 n_n37
+10 1
+.names pl pm nh2
+1- 1
+-0 1
+.names pq pb pi pk n_n32
+0111 1
+.names pq pg pi pk n_n26
+0011 1
+.names pm n_n26 nd2
+0- 1
+-1 1
+.names pq pf pi pk n_n27
+0011 1
+.names pm n_n28 nz1
+0- 1
+-1 1
+.names pq pi n_n31
+00 1
+.names pq pk n_n30
+00 1
+.names pq ph pi pk n_n25
+0011 1
+.names pm n_n25 nf2
+0- 1
+-1 1
+.names pm n_n27 nb2
+0- 1
+-1 1
+.names pq pa pi pk n_n33
+0011 1
+.names pq pe pi pk n_n28
+0011 1
+.names pq pd pi pk n_n29
+0011 1
+.names pq pi pk nl1
+1-- 1
+-0- 1
+--0 1
+.names nh2 nl1 n_n51
+00 1
+.names pp nh2 n_n52
+10 1
+.names pi nv1 n_n45
+00 1
+.names nv1 nu1 n_n44
+00 1
+.names nb2 nl1 n_n38
+00 1
+.names pk nv1 n_n46
+00 1
+.names pt nb2 n_n39
+10 1
+.names pu pb0
+1 1
+.names pq pc0
+1 1
+.names ps pd0
+1 1
+.names pr pe0
+1 1
+.names pp ph0
+1 1
+.end

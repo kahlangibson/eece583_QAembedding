@@ -1,0 +1,48 @@
+.model top
+.inputs pa pb pc pd pe pf
+.outputs pg ph pi pj pk pl pm pn
+.names pa pb pc nj0 pg
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names pa pb pc nj0 ph
+0--- 1
+-1-- 1
+--1- 1
+---1 1
+.names pa pb pc nj0 pi
+1--- 1
+-0-- 1
+--1- 1
+---1 1
+.names pa pb pc nj0 pj
+0--- 1
+-0-- 1
+--1- 1
+---1 1
+.names pa pb pc nj0 pk
+1--- 1
+-1-- 1
+--0- 1
+---1 1
+.names pa pb pc nj0 pl
+0--- 1
+-1-- 1
+--0- 1
+---1 1
+.names pa pb pc nj0 pm
+1--- 1
+-0-- 1
+--0- 1
+---1 1
+.names pa pb pc nj0 pn
+0--- 1
+-0-- 1
+--0- 1
+---1 1
+.names pd pe pf nj0
+0-- 1
+-1- 1
+--1 1
+.end
