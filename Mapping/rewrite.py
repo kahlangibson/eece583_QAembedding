@@ -18,6 +18,8 @@ for f in filenames:
 	nets = {}
 	inet = 0
 	cells = []
+	inputs = []
+	outputs = []
 	with open(join(dirname,f)) as of:
 		temp = []
 		# INPUTS
@@ -32,6 +34,7 @@ for f in filenames:
 			line = of.readline()
 			temp = temp + [i for i in line.split()]
 		del temp[temp.index(".inputs")]
+		inputs = [i for i in temp]
 		for net in temp:
 			nets[net] = inet 
 			inet = inet + 1
@@ -48,6 +51,7 @@ for f in filenames:
 			line = of.readline()
 			temp = temp + [i for i in line.split()]
 		del temp[temp.index(".outputs")]
+		outputs = [i for i in temp]
 		for net in temp:
 			if net not in nets:
 				nets[net] = inet
@@ -111,15 +115,29 @@ for f in filenames:
 					line += ' '
 				line += '\n'
 				output.append(line)
+
 		of.write(str(len(cells))+ ' ' +str(numnets)+ ' 12 12\n')
+		of.write(str(len(inputs))+'\n')
+		for each in inputs:
+			temp_str = ''
+			sinks = []
+			for i,cell in enumerate(cells):
+				if each in cell[:-1]:
+					sinks.append(i)
+			if len(sinks) >= 1:
+				for sink in sinks:
+					temp_str = temp_str + str(sink) + ' '
+				of.write(temp_str + '\n')
+		of.write(str(len(outputs))+'\n')
+		for each in outputs:
+			source = []
+			for i,cell in enumerate(cells):
+				if cell[-1] == each:
+					source.append(i)
+			if len(source) > 1:
+				print "more than 1 source"
+			else:
+				of.write(str(source[0]) + '\n')
 		for each in output:
 			of.write(each)
-
-		# for cell in cells:
-		# 	temp = ''
-		# 	temp = temp + str(len(cell))+' '
-		# 	for net in cell:
-		# 		temp = temp + str(nets[net])+' '
-		# 	of.write(temp+'\n')
-		# 	#print temp
 

@@ -15,7 +15,7 @@ class draw(Circuit):
         self.myCanvas.configure(borderwidth=0, highlightthickness=0,width=0,
                                 height=0)
         # set this to True to *not* run animation
-        self.fast = False
+        self.fast = True
 
         self.cellwidth = 0
         self.cellheight = 0

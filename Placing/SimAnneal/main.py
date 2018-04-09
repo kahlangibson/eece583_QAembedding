@@ -33,7 +33,16 @@ def runAnneal():
         for sink in sinks:
             net.append(myCircuit.cells[sink])
         nets.append(net)
-    write_place(filename, nets, cells)
+    in_nets = []
+    for input in myCircuit.inputs:
+        net = []
+        for each in input:
+            net.append(myCircuit.cells[each])
+        in_nets.append(net)
+    out_nets = []
+    for output in myCircuit.outputs:
+        out_nets.append([myCircuit.cells[output[0]]])
+    write_place(filename, nets, cells, in_nets, out_nets)
 
 
 ## main ##

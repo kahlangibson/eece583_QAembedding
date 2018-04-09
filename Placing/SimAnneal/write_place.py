@@ -23,12 +23,26 @@ from os.path import isfile, join
 
 out_dir = "../output_simAnneal/"
 
-def write_place(circuit, nets, cells):
+def write_place(circuit, nets, cells, in_nets, out_nets):
     with open(out_dir+circuit, "w") as of:
         of.write("12 12\n")
         of.write(str(len(cells))+'\n')
         for cell in cells:
             of.write(str(cell[0])+' '+str(cell[1])+'\n')
+        of.write(str(len(in_nets)) + '\n')
+        for net in in_nets:
+            line = str(len(net)) + ' '
+            for n in net:
+                line += str(n.x) + ' ' + str(n.y) + ' '
+            line += '\n'
+            of.write(line)
+        of.write(str(len(out_nets)) + '\n')
+        for net in out_nets:
+            line = str(len(net)) + ' '
+            for n in net:
+                line += str(n.x) + ' ' + str(n.y) + ' '
+            line += '\n'
+            of.write(line)
         of.write(str(len(nets))+'\n')
         for net in nets:
             line = str(len(net))+' '
@@ -36,6 +50,3 @@ def write_place(circuit, nets, cells):
                 line += str(n.x)+' '+str(n.y)+' '
             line += '\n'
             of.write(line)
-
-
-

@@ -12,6 +12,18 @@ class Circuit:
     def __init__(self, f):
         [self.numCells, self.numNets, self.ny, self.nx] = [int(s) for s in f.readline().split()]
 
+        num_ins = int(f.readline().split()[0])
+        self.inputs = []
+        for _ in range(num_ins):
+            line = [int(s) for s in f.readline().split()]
+            self.inputs.append(line)
+
+        num_outs = int(f.readline().split()[0])
+        self.outputs = []
+        for _ in range(num_outs):
+            line = [int(s) for s in f.readline().split()]
+            self.outputs.append(line)
+
         self.nets = []
         self.costs = []
         for _ in range(self.numNets):
