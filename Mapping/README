@@ -1,0 +1,10 @@
+directory: Mapping
+==================
+this directory contains scripts to map input benchmark circuits "../benchmarks" to a basic library of Ising primitives
+
+Dependencies: 
+ - put this directory into a folder containing your ABC installation
+
+ Outputs:
+ - "output" directory, containing mapped .blif benchmarks
+ - "testnets" directory, containing files in the format expected by placement algorithms

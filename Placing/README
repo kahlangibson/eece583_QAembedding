@@ -1,0 +1,11 @@
+directory: Placing
+==================
+this directory contains scripts to place input circuit cells
+
+SIMULATED ANNEALING
+ - run simulated annealing GUI: SimAnneal/main.py
+ - output in "output_simAnneal"
+
+GENETIC ALGORITHM
+ - run: Genetic/main.py
+ - output in "output_genetic"

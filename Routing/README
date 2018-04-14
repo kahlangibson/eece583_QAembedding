@@ -1,0 +1,5 @@
+directory: Routing
+==================
+this directory contains scripts to route circuits that have been placed by the placement algorithm
+
+run: main.py

@@ -8,8 +8,8 @@ TODO doesn't handle input/output nets well yet - no cells allocated as input/out
 from os import listdir
 from os.path import isfile, join, basename
 
-dirname = './output/'
-outdir = './testnets/'
+dirname = './Mapping/output/'
+outdir = './Mapping/testnets/'
 
 filenames = [f for f in listdir(dirname) if isfile(join(dirname, f)) and ".blif" in f]
 

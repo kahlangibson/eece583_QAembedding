@@ -6,15 +6,29 @@ This repo includes the source code for a mapping, placing, and routing workflow 
 
 The hierarchy of this project is as follows:
 
-#### benchmarks
-contains the unmapped MCNC benchmark circuits
-
 #### Mapping
 contains the flow for mapping the benchmark circuits to a simplified library and logic for generation of placement input files
 
-#### Placement
-contains the algorithms for global cell placement, including a previous (Simulated Annealing)[https://github.com/kahlanlg/CADplacement] implementation and a genetic algorithm implementation. Also includes logic for generation of detailed placement/routing input files
+#### Placing
+contains a genetic algorithm for global cell placement and results of a simulated annealer placer https://github.com/kahlanlg/CADplacement, and the genetic algorithm with and without congestion awareness. Also includes logic for generation of detailed placement/routing input files.
+
+#### Routing
+contains a Lee-Moore routing algorithm based on a previous implementation https://github.com/kahlanlg/CADrouting. Also contains results from this algorithm and logic for generation of output files for placement image generation.
+
+#### images
+contains logic to generate an output image from the routed result, and images of results obtained for this project. 
+
+#### benchmarks
+contains the unmapped MCNC benchmark circuits
+
+#### demo
+contains a simple circuit example
+
+#### Execution Instructions
+1. clone the repo into your local ABC installation
+2. Perform automatic mapping, placing, routing, and image generation by executing ```bash run.sh```
 
 _Dependencies/Credit_
 1. ABC http://people.eecs.berkeley.edu/~alanmi/abc/
 2. MCNC Benchmark Circuits https://people.engr.ncsu.edu/brglez/
+3. Python 2.7
