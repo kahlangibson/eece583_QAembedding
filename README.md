@@ -2,6 +2,8 @@
 
 >Su, J., Tu, T., & He, L. (n.d.). A Quantum Annealing Approach for Boolean Satisfiability Problem. https://doi.org/10.1145/2897937.2897973
 
+[Presentation available here](https://docs.google.com/presentation/d/e/2PACX-1vQks8mPTlgY37H0-BSJRrfL-y1BST5HLqknpHrXkGCHNW6K36bij29vFaozquD183lswUvwttl_tRwd/pub?start=false&loop=false&delayms=3000)
+
 This repo includes the source code for a mapping, placing, and routing workflow for MCNC benchmark circuits to the D-Wave Quantum Annealing architecture. 
 
 The hierarchy of this project is as follows:
